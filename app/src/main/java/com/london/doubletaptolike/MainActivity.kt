@@ -14,7 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        startAnim()
+    }
 
+    private fun startAnim() {
         val zoomInAnim = AnimationUtils.loadAnimation(this, R.anim.zoom_in)
         val zoomOutAnim = AnimationUtils.loadAnimation(this, R.anim.zoom_out)
         binding.imageView.setOnClickListener(object : DoubleClickListener(), View.OnClickListener {
